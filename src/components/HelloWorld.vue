@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import request from '../utils/proxyRequest'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+
+onMounted(() => {
+  request.post('/encrypt', { data: '123' })
+})
 </script>
 
 <template>
@@ -19,9 +24,8 @@ const count = ref(0)
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite
+    starter
   </p>
   <p>
     Install
@@ -36,3 +40,4 @@ const count = ref(0)
   color: #888;
 }
 </style>
+../utils/proxyRequest

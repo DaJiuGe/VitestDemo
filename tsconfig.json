@@ -29,8 +29,10 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
-  ],
+    "src/**/*.vue",
+    "build/**/*.ts",
+    "server/**/*.ts"
+, "server/fake-server.js"  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
